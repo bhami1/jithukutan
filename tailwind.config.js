@@ -9,21 +9,27 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#08090d',
-          darker: '#040508',
-          card: '#0e111a',
-          hover: '#141824',
+          DEFAULT: '#0b0c11',
+          darker: '#07080a',
+          card: '#12141c',
+          hover: '#191b26',
         },
-        accent: {
-          violet: '#8b5cf6',
-          purple: '#a855f7',
-          blue: '#3b82f6',
-          cyan: '#06b6d4',
-          emerald: '#10b981',
+        pastel: {
+          sage: '#b8d8be',
+          sageDark: '#8fb898',
+          lavender: '#d8b4e2',
+          mauve: '#c4b5fd',
+          peach: '#fed7aa',
+          apricot: '#fdba74',
+          sky: '#bae6fd',
+          butter: '#fef08a',
+          linen: '#fbf8f3',
+          cream: '#ede8df',
+          stone: '#a8a29e',
         },
         border: {
-          subtle: 'rgba(255, 255, 255, 0.07)',
-          glow: 'rgba(139, 92, 246, 0.3)',
+          subtle: 'rgba(255, 255, 255, 0.08)',
+          pastel: 'rgba(184, 216, 190, 0.25)',
         }
       },
       fontFamily: {
@@ -32,27 +38,24 @@ export default {
         display: ['"Space Grotesk"', 'sans-serif'],
       },
       animation: {
-        'glow-pulse': 'glowPulse 6s ease-in-out infinite',
-        'float-slow': 'floatSlow 7s ease-in-out infinite',
-        'border-beam': 'borderBeam 4s linear infinite',
+        'glow-pulse': 'glowPulse 7s ease-in-out infinite',
+        'float-slow': 'floatSlow 8s ease-in-out infinite',
       },
       keyframes: {
         glowPulse: {
-          '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-          '50%': { opacity: '0.6', transform: 'scale(1.08)' },
+          '0%, 100%': { opacity: '0.25', transform: 'scale(1)' },
+          '50%': { opacity: '0.5', transform: 'scale(1.06)' },
         },
         floatSlow: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
-        borderBeam: {
-          '100%': { offsetDistance: '100%' },
-        }
       },
       boxShadow: {
-        'glow-violet': '0 0 35px -5px rgba(139, 92, 246, 0.25)',
-        'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.25)',
-        'glass-card': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        'glow-sage': '0 0 35px -5px rgba(184, 216, 190, 0.2)',
+        'glow-lavender': '0 0 35px -5px rgba(216, 180, 226, 0.2)',
+        'glow-peach': '0 0 35px -5px rgba(254, 215, 170, 0.2)',
+        'glass-card': '0 12px 36px 0 rgba(0, 0, 0, 0.45)',
       }
     },
   },

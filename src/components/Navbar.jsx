@@ -8,7 +8,6 @@ const navItems = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
-  { name: 'GitHub', href: '#github' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -22,7 +21,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 40);
 
       // Determine active section
-      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'github', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -52,15 +51,15 @@ export default function Navbar() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="group flex items-center gap-2.5 bg-black/40 backdrop-blur-xl border border-white/10 px-3.5 py-1.5 rounded-full hover:border-violet-500/40 transition-colors"
+          className="group flex items-center gap-2.5 bg-[#12141c]/80 backdrop-blur-xl border border-white/10 px-3.5 py-1.5 rounded-full hover:border-pastel-sage/50 transition-colors"
         >
-          <span className="w-7 h-7 rounded-full bg-gradient-to-tr from-violet-600 via-indigo-600 to-cyan-400 flex items-center justify-center text-xs font-bold font-mono text-white shadow-sm shadow-violet-500/30 group-hover:scale-105 transition-transform">
+          <span className="w-7 h-7 rounded-full bg-gradient-to-tr from-pastel-sage to-pastel-lavender flex items-center justify-center text-xs font-bold font-mono text-[#0b0c11] shadow-sm group-hover:scale-105 transition-transform">
             AV
           </span>
           <span className="font-display font-semibold tracking-tight text-sm text-slate-200 group-hover:text-white transition-colors">
             Abhijith V
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" title="Available for work" />
+          <span className="w-1.5 h-1.5 rounded-full bg-pastel-sage animate-pulse" title="Available for work" />
         </motion.a>
 
         {/* Desktop Navigation Pill */}
@@ -70,8 +69,8 @@ export default function Navbar() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className={`hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full transition-all duration-300 ${
             scrolled
-              ? 'bg-[#0e111a]/85 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-black/80'
-              : 'bg-white/[0.04] backdrop-blur-md border border-white/5'
+              ? 'bg-[#12141c]/90 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-black/80'
+              : 'bg-white/[0.03] backdrop-blur-md border border-white/5'
           }`}
         >
           {navItems.map((item) => {
@@ -89,7 +88,7 @@ export default function Navbar() {
                 {isActive && (
                   <motion.span
                     layoutId="activeNavIndicator"
-                    className="absolute inset-0 bg-gradient-to-r from-violet-600/30 to-indigo-600/30 border border-violet-500/30 rounded-full -z-10"
+                    className="absolute inset-0 bg-gradient-to-r from-pastel-sage/20 to-pastel-lavender/20 border border-pastel-sage/30 rounded-full -z-10"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -110,20 +109,19 @@ export default function Navbar() {
             href={personalInfo.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-mono text-slate-400 hover:text-slate-200 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5"
+            className="text-xs font-mono text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5 hover:border-pastel-sage/40"
           >
             <span>GitHub</span>
-            <ArrowUpRight className="w-3 h-3" />
+            <ArrowUpRight className="w-3 h-3 text-pastel-sage" />
           </a>
           <a
             href="#contact"
-            className="relative group overflow-hidden text-xs font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 text-white shadow-lg shadow-violet-600/20 hover:shadow-violet-600/35 transition-all"
+            className="relative group overflow-hidden text-xs font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-pastel-sage via-pastel-lavender to-pastel-peach text-[#0b0c11] shadow-lg shadow-pastel-sage/15 hover:shadow-pastel-sage/25 transition-all"
           >
-            <span className="relative z-10 flex items-center gap-1.5">
+            <span className="relative z-10 flex items-center gap-1.5 font-bold">
               <span>Let's Talk</span>
-              <Sparkles className="w-3 h-3" />
+              <Sparkles className="w-3 h-3 text-[#0b0c11]" />
             </span>
-            <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
         </motion.div>
 
@@ -131,7 +129,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-2">
           <a
             href="#contact"
-            className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
+            className="text-xs font-bold px-3 py-1.5 rounded-full bg-gradient-to-r from-pastel-sage to-pastel-lavender text-[#0b0c11]"
           >
             Talk
           </a>
@@ -153,7 +151,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden mt-3 max-w-lg mx-auto bg-[#0d101a]/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/90"
+            className="md:hidden mt-3 max-w-lg mx-auto bg-[#12141c]/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/90"
           >
             <div className="grid grid-cols-2 gap-2 mb-3">
               {navItems.map((item) => (
@@ -172,7 +170,7 @@ export default function Navbar() {
                 href={personalInfo.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-violet-400 flex items-center gap-1"
+                className="hover:text-pastel-sage flex items-center gap-1"
               >
                 GitHub Profile ↗
               </a>
@@ -180,7 +178,7 @@ export default function Navbar() {
                 href={personalInfo.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-400 flex items-center gap-1"
+                className="hover:text-pastel-lavender flex items-center gap-1"
               >
                 LinkedIn ↗
               </a>

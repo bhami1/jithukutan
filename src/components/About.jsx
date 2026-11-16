@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Shield, Laptop, BookOpen, Compass, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Shield, Sparkles, BookOpen, Compass, CheckCircle2, Feather, Globe, GraduationCap } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-[#07080c]">
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-[#090a0f]">
       
-      {/* Background accents */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-violet-600/5 blur-[120px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-0 w-80 h-80 bg-cyan-500/5 blur-[120px] pointer-events-none rounded-full" />
+      {/* Soft pastel ambient background blooms */}
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-pastel-sage/5 blur-[130px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 right-0 w-80 h-80 bg-pastel-lavender/5 blur-[130px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto">
         
@@ -22,10 +22,10 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2 mb-3"
           >
-            <span className="font-mono text-xs uppercase tracking-widest text-violet-400">
-              01 // Background & Ethos
+            <span className="font-mono text-xs uppercase tracking-widest text-pastel-sage">
+              01 // Background & Philosophy
             </span>
-            <div className="h-px w-12 bg-violet-500/30" />
+            <div className="h-px w-12 bg-pastel-sage/30" />
           </motion.div>
 
           <motion.h2
@@ -35,8 +35,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white tracking-tight"
           >
-            Behind the code: <br />
-            <span className="text-gradient">Logic, craft, and intentional design.</span>
+            Crafting software with <br />
+            <span className="text-gradient-pastel">thoughtful intent &amp; natural balance.</span>
           </motion.h2>
         </div>
 
@@ -52,65 +52,61 @@ export default function About() {
             className="lg:col-span-7 space-y-6 text-slate-300 text-base leading-relaxed"
           >
             <p className="text-lg text-slate-200 font-medium">
-              Hello! I am <span className="text-white font-semibold">Abhijith V</span>, a full-stack engineer and computer science researcher based in Kerala, India. My journey combines deep computational curiosity with hands-on application delivery.
+              Hello! I am <span className="text-pastel-cream font-semibold">Abhijith V</span>, a developer based in Kerala, India. I approach software engineering as both an exact science and a craft of digital harmony.
             </p>
 
             <p>
-              I specialize in architecting responsive web applications with React, constructing performant backends using Python (Django and Flask), building native Android utilities with Kotlin and Java, and implementing practical computer vision and AI classifiers.
-            </p>
-
-            <p>
-              My engineering philosophy revolves around three foundational pillars:
+              I build cross-platform mobile utilities, modern web architectures with React, and applied machine learning tools. Rather than chasing unnecessary complexity, I value clean modularity, honest performance, and respecting user privacy at every layer.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-              <div className="p-4 rounded-2xl glass-card border border-white/5 space-y-2">
-                <div className="flex items-center gap-2 text-violet-400 font-semibold text-sm">
+              <div className="p-5 rounded-2xl glass-card border border-white/5 space-y-2 hover:border-pastel-sage/30 transition-all">
+                <div className="flex items-center gap-2 text-pastel-sage font-semibold text-sm">
                   <Shield className="w-4 h-4" />
-                  <span>Privacy-First Engineering</span>
+                  <span>Privacy-First Philosophy</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-normal">
-                  Prioritizing on-device computation, local media indexing, and zero-telemetry architectures like in my Android project TimeWarp.
+                  Prioritizing on-device data processing, zero unnecessary tracking, and local device APIs as shown in TimeWarp.
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl glass-card border border-white/5 space-y-2">
-                <div className="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
-                  <Laptop className="w-4 h-4" />
-                  <span>Full-Stack Versatility</span>
+              <div className="p-5 rounded-2xl glass-card border border-white/5 space-y-2 hover:border-pastel-lavender/30 transition-all">
+                <div className="flex items-center gap-2 text-pastel-lavender font-semibold text-sm">
+                  <Feather className="w-4 h-4" />
+                  <span>Clean Engineering</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-normal">
-                  Seamlessly bridging modern component-driven frontends with resilient APIs, relational schemas, and asynchronous job workers.
+                  Writing maintainable, readable code with robust types, clean abstractions, and purposeful architecture.
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl glass-card border border-white/5 space-y-2">
-                <div className="flex items-center gap-2 text-indigo-400 font-semibold text-sm">
+              <div className="p-5 rounded-2xl glass-card border border-white/5 space-y-2 hover:border-pastel-peach/30 transition-all">
+                <div className="flex items-center gap-2 text-pastel-peach font-semibold text-sm">
                   <Sparkles className="w-4 h-4" />
-                  <span>Applied AI & Deep Learning</span>
+                  <span>Applied AI & Vision</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-normal">
-                  Building focused neural network classifiers (e.g. real vs synthetic face detection) and production OpenAI chatbot integrations.
+                  Developing focused convolutional neural networks and natural language interfaces that solve tangible problems.
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl glass-card border border-white/5 space-y-2">
-                <div className="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
-                  <BookOpen className="w-4 h-4" />
-                  <span>Continuous Academic Growth</span>
+              <div className="p-5 rounded-2xl glass-card border border-white/5 space-y-2 hover:border-pastel-sky/30 transition-all">
+                <div className="flex items-center gap-2 text-pastel-sky font-semibold text-sm">
+                  <GraduationCap className="w-4 h-4" />
+                  <span>Continuous Learning</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-normal">
-                  From Bachelor of Computer Science to pursuing my MCA, rigorously expanding theoretical foundations and systems engineering mastery.
+                  Grounding practical engineering in rigorous computer science theory through B.Sc and ongoing MCA postgraduate work.
                 </p>
               </div>
             </div>
 
             <p>
-              When I step away from code, you will find me mentoring aspiring programmers, analyzing open-source codebases, and exploring the serene coastline of Varkala.
+              Outside of development, I enjoy mentoring new programmers, experimenting with open-source systems, and taking quiet walks along the scenic coastline of Varkala.
             </p>
           </motion.div>
 
-          {/* Interactive Developer Terminal / Specs Card */}
+          {/* Right Column: Natural Pastel Profile & Disciplines Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -118,64 +114,89 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5"
           >
-            <div className="rounded-2xl glass-card border border-white/10 overflow-hidden shadow-2xl">
+            <div className="rounded-3xl glass-card border border-white/10 p-7 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#141620] to-[#0e1017]">
               
-              {/* Terminal Window Header */}
-              <div className="bg-[#0b0e17] px-4 py-3 border-b border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
-                  <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
-                  <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                  <span className="ml-2 text-xs font-mono text-slate-400">abhijith@archlinux ~ specs</span>
-                </div>
-                <span className="text-[10px] font-mono text-slate-500">v2.6.4</span>
-              </div>
+              {/* Soft decorative ambient glow */}
+              <div className="absolute top-0 right-0 w-44 h-44 bg-pastel-sage/10 blur-3xl pointer-events-none rounded-full" />
+              <div className="absolute bottom-0 left-0 w-44 h-44 bg-pastel-lavender/10 blur-3xl pointer-events-none rounded-full" />
 
-              {/* Terminal Body */}
-              <div className="p-5 font-mono text-xs space-y-3.5 bg-[#0a0d15]/95 text-slate-300">
+              <div className="relative z-10 space-y-6">
                 
-                <div>
-                  <span className="text-violet-400 font-semibold">$ whoami</span>
-                  <p className="text-slate-200 mt-1 pl-3 border-l-2 border-violet-500/40">
-                    Abhijith V — Software Engineer & Full-Stack Developer
-                  </p>
-                </div>
-
-                <div>
-                  <span className="text-cyan-400 font-semibold">$ cat education.json</span>
-                  <div className="text-slate-300 mt-1 pl-3 border-l-2 border-cyan-500/40 space-y-1">
-                    <div>• <strong className="text-white">Degree:</strong> Bachelor of Computer Science (Kerala University)</div>
-                    <div>• <strong className="text-white">Current:</strong> Master of Computer Applications (MCA)</div>
-                    <div>• <strong className="text-white">Credential:</strong> Microsoft Cybersecurity Essentials</div>
+                {/* Header Badge */}
+                <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-pastel-sage animate-pulse" />
+                    <span className="font-display font-semibold text-white text-sm">Abhijith V</span>
                   </div>
-                </div>
-
-                <div>
-                  <span className="text-indigo-400 font-semibold">$ cat focus_areas.sys</span>
-                  <div className="text-slate-300 mt-1 pl-3 border-l-2 border-indigo-500/40 space-y-1">
-                    <div>• Frontend: React 19, Tailwind CSS, Modern ES6+</div>
-                    <div>• Backend: Python, Django, Flask, Node.js, PHP</div>
-                    <div>• Mobile: Android (Kotlin/Java), Flutter (Dart)</div>
-                    <div>• AI / Vision: PyTorch CNNs, OpenAI APIs</div>
-                  </div>
-                </div>
-
-                <div>
-                  <span className="text-emerald-400 font-semibold">$ cat location.cfg</span>
-                  <p className="text-slate-300 mt-1 pl-3 border-l-2 border-emerald-500/40">
-                    Varkala, Thiruvananthapuram, Kerala, India (IST / UTC+5:30)
-                  </p>
-                </div>
-
-                <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
-                  <span className="flex items-center gap-1.5 text-emerald-400">
-                    <CheckCircle2 className="w-3.5 h-3.5" /> Ready for hire
+                  <span className="text-[11px] font-mono text-pastel-sage bg-pastel-sage/10 px-2.5 py-0.5 rounded-full border border-pastel-sage/20">
+                    Kerala, India
                   </span>
-                  <span className="text-slate-500">Status: Active</span>
+                </div>
+
+                {/* Key Disciplines List */}
+                <div className="space-y-4 text-xs">
+                  <div>
+                    <span className="text-slate-400 font-mono text-[11px] uppercase tracking-wider block mb-1">
+                      Current Specialization
+                    </span>
+                    <p className="text-sm font-semibold text-slate-100">
+                      Master of Computer Applications (MCA)
+                    </p>
+                    <p className="text-slate-400 text-xs mt-0.5">
+                      Distributed computing, software engineering &amp; intelligent systems.
+                    </p>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 font-mono text-[11px] uppercase tracking-wider block mb-1">
+                      Academic Degree
+                    </span>
+                    <p className="text-sm font-semibold text-slate-100">
+                      Bachelor of Computer Science
+                    </p>
+                    <p className="text-slate-400 text-xs mt-0.5">
+                      Kerala University (2022 — 2025)
+                    </p>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 font-mono text-[11px] uppercase tracking-wider block mb-1">
+                      Certification
+                    </span>
+                    <p className="text-sm font-semibold text-slate-100">
+                      Career Essentials in Cybersecurity
+                    </p>
+                    <p className="text-slate-400 text-xs mt-0.5">
+                      Microsoft &amp; LinkedIn Learning
+                    </p>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 font-mono text-[11px] uppercase tracking-wider block mb-1">
+                      Core Stacks
+                    </span>
+                    <div className="flex flex-wrap gap-1.5 mt-1.5">
+                      {['React', 'Python / Django', 'Kotlin / Android', 'Flutter', 'PyTorch CNN', 'MySQL'].map((t) => (
+                        <span
+                          key={t}
+                          className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-white/5 border border-white/5 text-pastel-cream"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Status Footer */}
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                  <span className="flex items-center gap-1.5 text-pastel-sage">
+                    <CheckCircle2 className="w-3.5 h-3.5" /> Open to Opportunities
+                  </span>
+                  <span>IST / UTC+5:30</span>
                 </div>
 
               </div>
-
             </div>
           </motion.div>
 

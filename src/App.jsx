@@ -5,7 +5,6 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ExperienceEducation from './components/ExperienceEducation';
-import GitHubStats from './components/GitHubStats';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -29,14 +28,14 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#08090d] text-slate-100 selection:bg-violet-600/30 selection:text-violet-200">
+    <div className="relative min-h-screen bg-[#0b0c11] text-slate-100 selection:bg-pastel-sage/30 selection:text-pastel-cream">
       
-      {/* Dynamic Cursor Ambient Spotlight */}
+      {/* Dynamic Cursor Ambient Soft Pastel Spotlight */}
       {isPointerDevice && (
         <div
-          className="fixed pointer-events-none rounded-full blur-[100px] -z-1 transition-opacity duration-300 w-[450px] h-[450px] bg-gradient-to-r from-violet-600/10 via-indigo-600/10 to-cyan-500/10"
+          className="fixed pointer-events-none rounded-full blur-[110px] -z-1 transition-opacity duration-300 w-[420px] h-[420px] bg-gradient-to-r from-pastel-sage/10 via-pastel-lavender/10 to-pastel-peach/10"
           style={{
-            transform: `translate3d(${mousePosition.x - 225}px, ${mousePosition.y - 225}px, 0)`,
+            transform: `translate3d(${mousePosition.x - 210}px, ${mousePosition.y - 210}px, 0)`,
             willChange: 'transform',
           }}
         />
@@ -52,7 +51,6 @@ export default function App() {
         <Skills />
         <Projects />
         <ExperienceEducation />
-        <GitHubStats />
         <Contact />
       </main>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, Heart, Sparkles } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TelegramIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 
@@ -11,13 +11,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#050609] border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8 text-slate-400 relative">
+    <footer className="bg-[#07080d] border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8 text-slate-400 relative">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Brand & Copyright */}
         <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-gradient-to-tr from-violet-600 to-cyan-400 flex items-center justify-center text-[10px] font-bold font-mono text-white">
+            <span className="w-6 h-6 rounded-full bg-gradient-to-tr from-pastel-sage to-pastel-lavender flex items-center justify-center text-[10px] font-bold font-mono text-[#0b0c11]">
               AV
             </span>
             <span className="font-display font-bold text-white text-sm tracking-tight">
@@ -36,7 +36,7 @@ export default function Footer() {
             href={personalInfo.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-violet-400 transition-colors flex items-center gap-1.5"
+            className="hover:text-pastel-sage transition-colors flex items-center gap-1.5"
           >
             <GithubIcon className="w-3.5 h-3.5" />
             <span>GitHub</span>
@@ -45,7 +45,7 @@ export default function Footer() {
             href={personalInfo.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors flex items-center gap-1.5"
+            className="hover:text-pastel-lavender transition-colors flex items-center gap-1.5"
           >
             <LinkedinIcon className="w-3.5 h-3.5" />
             <span>LinkedIn</span>
@@ -54,14 +54,14 @@ export default function Footer() {
             href={personalInfo.socials.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
+            className="hover:text-pastel-peach transition-colors flex items-center gap-1.5"
           >
             <TelegramIcon className="w-3.5 h-3.5" />
             <span>Telegram</span>
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="hover:text-violet-400 transition-colors flex items-center gap-1.5"
+            className="hover:text-pastel-sage transition-colors flex items-center gap-1.5"
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Email</span>
@@ -72,10 +72,10 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           aria-label="Back to top of page"
-          className="group p-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-400 hover:text-white transition-all flex items-center gap-1.5 text-xs font-mono cursor-pointer"
+          className="group p-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-400 hover:text-white transition-all flex items-center gap-1.5 text-xs font-mono cursor-pointer hover:border-pastel-sage/40"
         >
           <span>Top</span>
-          <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
+          <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 text-pastel-sage transition-transform" />
         </button>
 
       </div>

@@ -12,43 +12,43 @@
     color-scheme: dark;
   }
 
-  /* Custom luxury scrollbar */
+  /* Custom natural pastel scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #08090d;
+    background: #0b0c11;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e2233;
+    background: #222633;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3b306b;
+    background: #394054;
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  .text-gradient-cream {
+    background: linear-gradient(135deg, #fbf8f3 0%, #ede8df 50%, #c9c3b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .text-gradient-accent {
-    background: linear-gradient(135deg, #a78bfa 0%, #818cf8 50%, #38bdf8 100%);
+  .text-gradient-pastel {
+    background: linear-gradient(135deg, #d8b4e2 0%, #b8d8be 50%, #fed7aa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .text-gradient-purple-cyan {
-    background: linear-gradient(135deg, #c084fc 0%, #a855f7 35%, #06b6d4 100%);
+  .text-gradient-sage-sky {
+    background: linear-gradient(135deg, #b8d8be 0%, #bae6fd 60%, #d8b4e2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .glass-card {
-    background: rgba(14, 17, 26, 0.65);
+    background: rgba(18, 20, 28, 0.65);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -59,26 +59,26 @@
   }
   .glass-card-hover:hover {
     transform: translateY(-4px);
-    border-color: rgba(139, 92, 246, 0.35);
-    box-shadow: 0 16px 36px -12px rgba(139, 92, 246, 0.2);
+    border-color: rgba(184, 216, 190, 0.35);
+    box-shadow: 0 16px 36px -12px rgba(184, 216, 190, 0.15);
   }
 
   .glass-nav {
-    background: rgba(8, 9, 13, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(11, 12, 17, 0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .bg-grid-pattern {
     background-size: 40px 40px;
     background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
   }
 
   .bg-dots-pattern {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 }
